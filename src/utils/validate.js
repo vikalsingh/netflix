@@ -10,8 +10,7 @@ export const checkSigninValidData = (email, password) => {
 };
 
 export const checkSignupValidData = (name, email, password) => {
-    console.log(name, email, password)
-    const isNameValid = /\b([-,a-z. ']+[ ]*)+/.test(name);
+    const isNameValid = /^[a-zA-Z ]+$/.test(name);
     const isEmailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
     const isPasswordValid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password);
     

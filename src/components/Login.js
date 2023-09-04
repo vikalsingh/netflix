@@ -1,7 +1,7 @@
 import { Images } from "../utils/images";
 import Header from "./Header";
 import { useRef, useState } from "react";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -74,14 +74,12 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               const errorMessage = error.message;
               setErrMessage(errorMessage);
             });
           // ...
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -97,9 +95,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
           // ...vikal1@gmail.com Vik@12345
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
