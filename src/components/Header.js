@@ -54,7 +54,7 @@ const Header = () => {
       {user && (
         <div className="pt-6 px-8">
           <img className="w-10" src={user?.photoURL} alt="user Icon" />
-          <span onClick={handleSignOut} className="cursor-pointer font-bold">
+          <span onClick={handleSignOut} className="cursor-pointer font-bold text-white">
             (Sign out)
           </span>
         </div>
